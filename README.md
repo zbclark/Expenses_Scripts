@@ -20,9 +20,11 @@ A simple Python expense tracking application that stores expenses in JSON format
 
 1. **Upload your bank CSV file to VS Code**
 2. **Run the command:**
+
    ```bash
    python expenses.py your_bank_file.csv
    ```
+
 3. **Check your Downloads folder** for the categorized CSV file
 
 **That's it!** Your expenses are now categorized and ready for analysis.
@@ -30,11 +32,13 @@ A simple Python expense tracking application that stores expenses in JSON format
 ## Setup
 
 1. **Clone or navigate to the repository:**
+
    ```bash
    cd /workspaces/Expenses_Scripts
    ```
 
 2. **Install dependencies (optional - no external deps required):**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -42,16 +46,19 @@ A simple Python expense tracking application that stores expenses in JSON format
 ## Quick Start
 
 **Run with your bank CSV file:**
+
 ```bash
 python expenses.py your_bank_export.csv
 ```
 
 **Example:**
+
 ```bash
 python expenses.py October_Spending.csv
 ```
 
 The script will automatically:
+
 - ✅ Categorize all transactions using AI-powered rules
 - ✅ Export a clean CSV file ready for Excel/Google Sheets  
 - ✅ Download the file directly to your computer's Downloads folder
@@ -59,25 +66,30 @@ The script will automatically:
 ## Usage
 
 ### Option 1: Load expenses from your CSV file
+
 ```bash
 python expenses.py your_expenses.csv
 ```
 
 ### Option 2: Run with test data (no CSV file)
+
 ```bash
 python expenses.py
 ```
 
 ### CSV File Format
+
 Your CSV should have columns for expenses. The script automatically detects common column names:
 
 **Supported column names:**
+
 - **Amount**: `amount`, `cost`, `price`, `total`, `value`
-- **Category**: `category`, `type`, `class`, `group` 
+- **Category**: `category`, `type`, `class`, `group`
 - **Description**: `description`, `desc`, `note`, `memo`, `details`
 - **Date**: `date`, `timestamp`, `created`, `when`
 
 **Example CSV format:**
+
 ```csv
 date,amount,category,description
 2025-10-20,15.75,Food,Lunch at restaurant
@@ -85,15 +97,17 @@ date,amount,category,description
 2025-10-22,125.00,Shopping,Groceries
 ```
 
-### What it does:
+### What it does
+
 - Loads expenses from your CSV file (if provided)
 - Converts and stores them in JSON format
 - Shows summary with totals by category
 - Handles different CSV formats automatically
 - Falls back to test data if no CSV provided
 
-### Sample output with CSV:
-```
+### Sample output with CSV
+
+```text
 Loading expenses from CSV file: sample_expenses.csv
 Detected CSV columns: ['date', 'amount', 'category', 'description']
 Successfully loaded 6 expenses from sample_expenses.csv
@@ -125,12 +139,15 @@ All expenses:
 To use your CSV file from your computer:
 
 1. **Upload to workspace**: Drag and drop your CSV file into the VS Code file explorer
-2. **Or copy via terminal**: 
+2. **Or copy via terminal**:
+
    ```bash
    # If you have the file path on your system
    cp /path/to/your/expenses.csv /workspaces/Expenses_Scripts/
    ```
+
 3. **Then run the script**:
+
    ```bash
    python expenses.py your_expenses.csv
    ```
@@ -138,6 +155,7 @@ To use your CSV file from your computer:
 ## Development
 
 To extend the script, you can:
+
 - Add methods for filtering/reporting expenses
 - Implement expense editing/deletion  
 - Add data validation
@@ -148,11 +166,13 @@ To extend the script, you can:
 ## Common Commands
 
 **Process bank CSV and download results:**
+
 ```bash
 python expenses.py October_Spending.csv
 ```
 
 **Run with test data (no CSV file):**
+
 ```bash
 python expenses.py
 ```
@@ -160,20 +180,24 @@ python expenses.py
 ## GitHub Codespace Management
 
 **Stop the current codespace:**
+
 ```bash
 gh codespace stop
 ```
 
 **List all your codespaces:**
+
 ```bash
 gh codespace list
 ```
 
 **Stop a specific codespace:**
+
 ```bash
-gh codespace stop -c bug-free winner
+gh codespace stop -c bug-free-winner-rvjjjppjrx4356r4
 ```
 
 **Alternative ways to stop:**
+
 - From VS Code: `Ctrl+Shift+P` → "Codespaces: Stop Current Codespace"
 - From GitHub web: Visit [github.com/codespaces](https://github.com/codespaces) → Find your codespace → "..." menu → "Stop codespace"
