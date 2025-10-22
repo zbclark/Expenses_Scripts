@@ -1,0 +1,11 @@
+# Expenses_Scripts - Bank Transaction Categorizer
+# 
+# QUICK START:
+# python expenses.py your_bank_export.csv
+#
+# No external dependencies required for this script
+# All imports (json, datetime, collections, csv, sys, re, os, subprocess) are from Python standard library
+# 
+# If you add external dependencies later, list them here like:
+# pandas>=1.5.0
+# matplotlib>=3.6.0
