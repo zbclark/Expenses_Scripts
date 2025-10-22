@@ -118,7 +118,6 @@ All expenses:
 
 - `expenses.py` - Main expense tracking script with CSV support
 - `expenses.json` - Generated data file (created after first run)
-- `sample_expenses.csv` - Example CSV file for testing
 - `requirements.txt` - Python dependencies (empty - uses standard library only)
 
 ## CSV File Transfer
@@ -157,3 +156,24 @@ python expenses.py October_Spending.csv
 ```bash
 python expenses.py
 ```
+
+## GitHub Codespace Management
+
+**Stop the current codespace:**
+```bash
+gh codespace stop
+```
+
+**List all your codespaces:**
+```bash
+gh codespace list
+```
+
+**Stop a specific codespace:**
+```bash
+gh codespace stop -c bug-free winner
+```
+
+**Alternative ways to stop:**
+- From VS Code: `Ctrl+Shift+P` → "Codespaces: Stop Current Codespace"
+- From GitHub web: Visit [github.com/codespaces](https://github.com/codespaces) → Find your codespace → "..." menu → "Stop codespace"
