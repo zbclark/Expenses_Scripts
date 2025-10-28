@@ -49,12 +49,15 @@ class ExpenseTracker:
         print(f"Added expense: ${amount} for {category}")  
 
     def load_from_csv(self, csv_filename):
-        """Load expenses from a CSV file"""
+        """Load expenses from a CSV file with enhanced bank statement support"""
         # Clear existing expenses to avoid duplicates
         self.expenses = []
         loaded_count = 0
         try:
-            with open(csv_filename, 'r', newline='', encoding='utf-8') as csvfile:
+            # First, clean the CSV file to handle BOM and empty lines
+            cleaned_filename = self._clean_csv_file(csv_filename)
+            
+            with open(cleaned_filename, 'r', newline='', encoding='utf-8') as csvfile:
                 # Try to detect the delimiter
                 sample = csvfile.read(1024)
                 csvfile.seek(0)
@@ -66,46 +69,54 @@ class ExpenseTracker:
                 # Print detected columns for debugging
                 print(f"Detected CSV columns: {reader.fieldnames}")
                 
-                for row in reader:
-                    # Try different common column name variations
-                    amount = self._get_csv_value(row, ['amount', 'cost', 'price', 'total', 'value', 'amount ($)'])
-                    category = self._get_csv_value(row, ['category', 'type', 'class', 'group'])
-                    description = self._get_csv_value(row, ['description', 'desc', 'note', 'memo', 'details', 'action'])
-                    date = self._get_csv_value(row, ['date', 'timestamp', 'created', 'when', 'run date'])
-                    
-                    if amount is not None:
-                        # Clean up amount (remove $ and commas, handle negatives)
-                        amount_str = str(amount).replace('$', '').replace(',', '')
-                        try:
-                            amount_float = float(amount_str)
-                            # Skip deposits (positive amounts in bank statements)
-                            if amount_float > 0:
+                for row_num, row in enumerate(reader, 1):
+                    try:
+                        # Try different common column name variations
+                        amount = self._get_csv_value(row, ['amount', 'cost', 'price', 'total', 'value', 'amount ($)'])
+                        category = self._get_csv_value(row, ['category', 'class', 'group'])  # Remove 'type' for bank statements
+                        description = self._get_csv_value(row, ['action', 'description', 'desc', 'note', 'memo', 'details'])  # Prioritize 'action' for bank statements
+                        date = self._get_csv_value(row, ['date', 'timestamp', 'created', 'when', 'run date'])
+                        
+                        if amount is not None:
+                            # Clean up amount (remove $ and commas, handle negatives)
+                            amount_str = str(amount).replace('$', '').replace(',', '')
+                            try:
+                                amount_float = float(amount_str)
+                                # Skip deposits (positive amounts in bank statements)
+                                if amount_float > 0:
+                                    continue
+                                amount_float = abs(amount_float)  # Make expenses positive
+                            except ValueError:
+                                print(f"Skipping row {row_num} with invalid amount: {amount}")
                                 continue
-                            amount_float = abs(amount_float)  # Make expenses positive
-                        except ValueError:
-                            print(f"Skipping row with invalid amount: {amount}")
-                            continue
-                        
-                        # Parse bank transaction if no explicit category
-                        if not category and description:
-                            parsed_category, merchant = self._parse_bank_transaction(description, amount_float)
-                            category = parsed_category
-                            # Use merchant name as description if it's cleaner
-                            if len(merchant) < len(description):
-                                description = merchant
-                        
-                        # Skip income/transfer transactions
-                        if category and category.lower() == 'income':
-                            continue
-                        
-                        expense = {
-                            "date": date if date else datetime.date.today().isoformat(),
-                            "amount": amount_float,
-                            "category": (category or 'other').lower(),
-                            "description": description or ''
-                        }
-                        self.expenses.append(expense)
-                        loaded_count += 1
+                            
+                            # Always parse bank transaction for bank statements
+                            if description:
+                                parsed_category, merchant = self._parse_bank_transaction(description, amount_float)
+                                category = parsed_category
+                                # Use merchant name as description if it's cleaner
+                                if len(merchant) < len(description):
+                                    description = merchant
+                            
+                            # Skip income/transfer transactions
+                            if category and category.lower() == 'income':
+                                continue
+                            
+                            # Format date properly
+                            formatted_date = self._format_date(date) if date else datetime.date.today().isoformat()
+                            
+                            expense = {
+                                "date": formatted_date,
+                                "amount": amount_float,
+                                "category": (category or 'other').lower(),
+                                "description": description or ''
+                            }
+                            self.expenses.append(expense)
+                            loaded_count += 1
+                            
+                    except Exception as e:
+                        print(f"Error processing row {row_num}: {e}")
+                        continue
                         
             self.save_expenses()
             print(f"Successfully loaded {loaded_count} expenses from {csv_filename}")
@@ -267,14 +278,140 @@ class ExpenseTracker:
         for key in possible_keys:
             # Try exact match (case-insensitive)
             for row_key in row.keys():
-                if row_key.lower().strip() == key.lower():
-                    value = row[row_key].strip()
-                    return value if value else None
+                if row_key and row_key.lower().strip() == key.lower():
+                    value = row[row_key]
+                    if value is not None:
+                        value = str(value).strip()
+                        return value if value else None
                 # Also try partial matches for compound column names
-                if key.lower() in row_key.lower():
-                    value = row[row_key].strip()
-                    return value if value else None
+                if row_key and key.lower() in row_key.lower():
+                    value = row[row_key]
+                    if value is not None:
+                        value = str(value).strip()
+                        return value if value else None
         return None
+
+    def _clean_csv_file(self, csv_filename):
+        """Clean CSV file to handle BOM characters and empty lines"""
+        import tempfile
+        import os
+        
+        # Create a temporary cleaned file
+        temp_fd, temp_filename = tempfile.mkstemp(suffix='.csv', text=True)
+        
+        try:
+            with open(csv_filename, 'r', encoding='utf-8-sig') as input_file:
+                with os.fdopen(temp_fd, 'w', encoding='utf-8') as output_file:
+                    lines = input_file.readlines()
+                    
+                    # Find and write the header line
+                    header_written = False
+                    for line in lines:
+                        stripped_line = line.strip()
+                        if stripped_line and ('Run Date' in stripped_line or 'date' in stripped_line.lower() or 'amount' in stripped_line.lower()):
+                            output_file.write(stripped_line + '\n')
+                            header_written = True
+                            break
+                    
+                    # Write all data lines after the header
+                    if header_written:
+                        reading_data = False
+                        for line in lines:
+                            stripped_line = line.strip()
+                            # Skip empty lines
+                            if not stripped_line:
+                                continue
+                            # Start reading data after header
+                            if 'Run Date' in stripped_line or 'date' in stripped_line.lower():
+                                reading_data = True
+                                continue
+                            # Write data lines
+                            if reading_data:
+                                output_file.write(stripped_line + '\n')
+                    
+            return temp_filename
+            
+        except Exception as e:
+            # If cleaning fails, return original filename
+            os.close(temp_fd)
+            os.unlink(temp_filename)
+            return csv_filename
+
+    def _format_date(self, date_str):
+        """Format date string to ISO format (YYYY-MM-DD)"""
+        if not date_str:
+            return datetime.date.today().isoformat()
+        
+        try:
+            # Handle MM/DD/YYYY format
+            if '/' in date_str:
+                parts = date_str.split('/')
+                if len(parts) == 3:
+                    month, day, year = parts
+                    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+            
+            # Handle other formats - add more as needed
+            return date_str
+            
+        except Exception:
+            return datetime.date.today().isoformat()
+
+    def show_summary(self):
+        """Display a summary of all expenses"""
+        if not self.expenses:
+            print("No expenses to summarize.")
+            return
+        
+        from collections import defaultdict
+        
+        totals = defaultdict(float)
+        for expense in self.expenses:
+            totals[expense['category']] += expense['amount']
+        
+        # Sort by amount
+        sorted_totals = sorted(totals.items(), key=lambda x: x[1], reverse=True)
+        total_amount = sum(totals.values())
+        
+        print(f"\n=== EXPENSE SUMMARY ===")
+        print(f"Total expenses: {len(self.expenses)}")
+        print(f"Total amount: ${total_amount:,.2f}")
+        print(f"\nBy category:")
+        
+        for category, amount in sorted_totals:
+            percentage = (amount / total_amount) * 100
+            print(f"  {category.title()}: ${amount:,.2f} ({percentage:.1f}%)")
+
+    def export_to_csv(self, output_filename=None):
+        """Export expenses to a clean CSV file"""
+        if not self.expenses:
+            print("No expenses to export.")
+            return None
+        
+        if not output_filename:
+            # Generate filename based on current JSON filename
+            base_name = self.filename.replace('.json', '')
+            output_filename = f"{base_name}_categorized.csv"
+        
+        try:
+            with open(output_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                fieldnames = ['date', 'amount', 'category', 'description']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                
+                writer.writeheader()
+                for expense in sorted(self.expenses, key=lambda x: x['date']):
+                    writer.writerow({
+                        'date': expense['date'],
+                        'amount': f"{expense['amount']:.2f}",
+                        'category': expense['category'].title(),
+                        'description': expense['description']
+                    })
+            
+            print(f"📁 Exported {len(self.expenses)} expenses to: {output_filename}")
+            return output_filename
+            
+        except Exception as e:
+            print(f"Error exporting to CSV: {e}")
+            return None
 
     def _parse_bank_transaction(self, action_text, amount=0):
         """Parse bank transaction to extract merchant and category with smart rules"""
