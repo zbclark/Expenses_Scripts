@@ -1,0 +1,583 @@
+[
+  {
+    "date": "2025-11-03",
+    "amount": 1443.06,
+    "category": "deposits/transfers",
+    "description": "TRANSFERRED TO Tax/Savings (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 917.0,
+    "category": "deposits/transfers",
+    "description": "TRANSFERRED FROM Tax/Savings (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 100.0,
+    "category": "other",
+    "description": "DIRECT DEBIT VENMO PAYMENT (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 97.14,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0003 Walmart.com Bentonville AR10312524251319GF6JV6 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 28.0,
+    "category": "no category",
+    "description": "DIRECT DEBIT PAYPAL INST XFER (Cash)",
+    "notes": "??"
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 24.16,
+    "category": "misc",
+    "description": "DEBIT CARD PURCHASE QT 25 TULSA OK10292524692169F33KMH (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 10.66,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #3055 918-492-3396 OK10312524055249GFH83B (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 7.17,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #2250 918-299-9186 OK10312524055249GFH839 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 5.48,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE STARBUCKS STORE 26173 TULSA OK10292524692169F33GWL (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-03",
+    "amount": 1.95,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 400.0,
+    "category": "birthday/christmas",
+    "description": "CASH ADVANCE ATM0004 3915 S PEORIA TULSA OK11012574251319K06GSE (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 400.0,
+    "category": "birthday/christmas",
+    "description": "CASH ADVANCE ATM0004 3915 S PEORIA TULSA OK11012574251319K06GSE (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 288.44,
+    "category": "birthday/christmas",
+    "description": "DEBIT CARD PURCHASE POS3570 TARGET T-2357 Tulsa OK11022524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 261.4,
+    "category": "birthday/christmas",
+    "description": "Check Paid # 1224 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 245.9,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0099 WALMART.COM 80 BENTONVILLE AR11032524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 215.44,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE Noahs Bed Biscuit Kiefer OK11022524793389J01BH7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 151.83,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS1110 REASORS #25 TULSA OK11012524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 86.63,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0003 Walmart.com Bentonville AR11012524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 85.0,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE KCJ PHOTOGRAPHY, LLC WWW.KATHRYNCJ OK11022524492169J2X4WK (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 64.58,
+    "category": "transportation",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 54.99,
+    "category": "birthday/christmas",
+    "description": "DEBIT CARD PURCHASE ETSY, INC. BROOKLYN NY11032524793389K00X0Q (Cash)",
+    "notes": "??"
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 53.94,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE POS9999 TRADER JOE S # TULSA OK11012524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 43.14,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE POS1110 REASORS #25 TULSA OK11012524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 37.67,
+    "category": "shopping",
+    "description": "DEBIT CARD PURCHASE POS5420 TARGET T-2542 Tulsa OK11022524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 30.9,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE TULSA HILLS WINE CELLA TULSA OK10312524091629J0FV7L (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 26.5,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0894 WAL-MART #0894 TULSA OK10312524251319KF6JV7 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 25.0,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE STARBUCKS 8007827282 800-782-7282 WA11022524692169J2X65M (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 19.4,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 12.28,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE DAYLIGHT DONUTS JENKS OK11022524013399J008NF (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 9.0,
+    "category": "no category",
+    "description": "DEBIT CARD PURCHASE CASH APP*MAYSON WEEDEN Oakland CA11022524059369J005TN (Cash)",
+    "notes": "??"
+  },
+  {
+    "date": "2025-11-04",
+    "amount": 1.95,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 162.95,
+    "category": "no category",
+    "description": "CASH ADVANCE ATM3060 12120 S VANCOU GLENPOOL OK11042574251319L06GSF (Cash)",
+    "notes": "Transfer from Pay Yo Bills??"
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 93.24,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SQ *OK COUNTRY DONUT S Tulsa OK11032524692169K2XSRQ (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 81.72,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE MAZZIOS - 010 JENKS OK11032524269799KEJQVQ (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 65.1,
+    "category": "shopping",
+    "description": "DEBIT CARD PURCHASE ACG*NEBO FLASHLIGHTS ACGBRANDS.COM TX11032524116419KMKN0H (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 51.57,
+    "category": "transportation",
+    "description": "DEBIT CARD PURCHASE CASEYS #3522 JENKS OK11022524445009K8PS30 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 4.91,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": 2.0,
+    "category": "entertainment",
+    "description": "DEBIT CARD PURCHASE SKY ZONE - TULSA - GUE TULSA OK11022524269799KEJQVQ (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-05",
+    "amount": -2.95,
+    "category": "financial",
+    "description": "ADJUST FEE CHARGED ATM FEE REBATE (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-06",
+    "amount": 243.89,
+    "category": "birthday/christmas",
+    "description": "DEBIT CARD PURCHASE FAT BRAIN TOYS FATBRAINTOYS. NE11042524000779M2X4AM (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-07",
+    "amount": 54.44,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE TST*TACOS X MEZCAL Tulsa OK11052524692169N2X7KL (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-07",
+    "amount": 20.0,
+    "category": "food",
+    "description": "DIRECT DEBIT VENMO PAYMENT (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-07",
+    "amount": 6.2,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #5011 999-999-9999 OK11052524055249MFNQSY (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-07",
+    "amount": 4.91,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 272.19,
+    "category": "healthcare",
+    "description": "DEBIT CARD PURCHASE CURTIN DRUG JENKS OK11082524240529TFTSMD (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 93.02,
+    "category": "shopping",
+    "description": "DEBIT CARD PURCHASE TARGET.COM * 800-591-3869 MN11062524431069N9B6DD (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 57.49,
+    "category": "shopping",
+    "description": "DEBIT CARD PURCHASE Magic City Books TULSA OK11082524193049T0778S (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 47.96,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE HOMEGROWN 3013 ROGERS AR11072524943009R9QBV1 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 45.9,
+    "category": "shopping",
+    "description": "DEBIT CARD PURCHASE SP CFG THREADS FESTORA.STORE OR11072524011349R2X4NQ (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 38.73,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE TST* BRUT HOTEL TULSA OK11062524137469NEJGMN (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 17.41,
+    "category": "misc",
+    "description": "DEBIT CARD PURCHASE QT 96 TULSA OK11062524692169P2YFWL (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 16.94,
+    "category": "no category",
+    "description": "DEBIT CARD PURCHASE POS0012 UBER * PENDI uber.com CA11072524251319PF6JV8 (Cash)",
+    "notes": "Work??"
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 16.43,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SQ *BOLDER COFFEE Rogers AR11072524692169P2YF7G (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 13.62,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE DD *DOORDASH SONICDRIV 855-973-1040 CA11062524036299NLWSEP (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 13.0,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE BOOKOFMONTH *ADD-ONS BOTM.COM NY11062524116419NMK74S (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 11.41,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 10.74,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 6.13,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE CHICK-FIL-A #03253 TULSA OK11052524427339NLM87T (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 5.4,
+    "category": "no category",
+    "description": "DEBIT CARD PURCHASE THE UPS STORE 5194 972-5672370 OK11072524000979PM25Y6 (Cash)",
+    "notes": "Work??"
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 5.03,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE POS0126 PILOT #0145 SPRINGDALE AR11072524251319PF6JV8 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-10",
+    "amount": 4.75,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE LOVE'S #0295 INSIDE CHOUTEAU OK11062524692169N2XX9P (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 110.66,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0003 Walmart.com Bentonville AR11082524251319SF6JV9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 77.41,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE CHEWY.COM 800-672-4399 FL11092524692169T30KS2 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 76.0,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE MEXICALI BORDER CAFE TULSA OK11082524040839TS66MA (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 66.15,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE SOUTHWOODLANDSCAPENURS TULSA OK11072524750769TS66F5 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 61.03,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE POS2850 REASORS #20 JENKS OK11082524251319SF6JV9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 59.67,
+    "category": "other",
+    "description": "DEBIT CARD PURCHASE POS0100 SOUTHERN AG9-T Tulsa OK11092524251319SF6JV9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 48.72,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE POS2850 REASORS #20 JENKS OK11072524251319SF6JV9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 43.58,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE POS9999 WHOLEFDS YLE # TULSA OK11072524251319SF6JV9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-11",
+    "amount": 19.55,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #6391 405-225-4816 OK11092524055249TFSJM9 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-12",
+    "amount": 10.77,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #3055 918-492-3396 OK11102524055249SFVHX2 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 1939.61,
+    "category": "deposits/transfers",
+    "description": "DIRECT DEPOSIT Sazerac CompPAYROLL (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 266.63,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0003 Walmart.com Bentonville AR11112524251319WF6JVA (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 125.0,
+    "category": "healthcare",
+    "description": "DEBIT CARD PURCHASE PSYCHOTHERAPY SESSION JACKIEBONTRAG OK11112524011349W2X4LS (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 49.97,
+    "category": "no category",
+    "description": "DEBIT CARD PURCHASE APPLE CASH SENT MONEY 1INFINITELOOP CA11112524055239WFWSY4 (Cash)",
+    "notes": "??"
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 31.27,
+    "category": "groceries",
+    "description": "DEBIT CARD PURCHASE POS0003 Walmart.com Bentonville AR11122524251319WF6JVA (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 26.14,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE CHICK-FIL-A #04345 GLENPOOL OK11102524427339VLM8EW (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 25.41,
+    "category": "misc",
+    "description": "QUIKTRIP CORP",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-13",
+    "amount": 0.5,
+    "category": "healthcare",
+    "description": "DEBIT CARD PURCHASE POS0214 CVS/PHARMACY # JENKS OK11112524251319WF6JVA (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-14",
+    "amount": 1939.61,
+    "category": "deposits/transfers",
+    "description": "TRANSFERRED TO Tax/Savings (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-14",
+    "amount": 60.52,
+    "category": "food",
+    "description": "CAFE OLE",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-14",
+    "amount": 12.4,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE SONIC DRIVE IN #3055 918-492-3396 OK11122524055249WFXHP0 (Cash)",
+    "notes": ""
+  },
+  {
+    "date": "2025-11-14",
+    "amount": 6.2,
+    "category": "food",
+    "description": "DEBIT CARD PURCHASE OUTSTAND AUTH 11/13 SONIC DRIVE IN #3055531719088427100 as of Nov-13-2025 (Cash)",
+    "notes": ""
+  }
+]
